@@ -7,8 +7,8 @@ import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
 
 
 const Nav = () => {
-    const isUserLoggedIn = true;
-    // const { data:session } = useSession();
+    // const isUserLoggedIn = true;
+    const { data:session } = useSession();
 
     // Providers are used to keep track if a user is logged in or out
     const [providers, setProviders]=useState(null);
@@ -39,7 +39,8 @@ const Nav = () => {
 
         {/* DESKTOP RESPONSIVE / VIEW */}
         <div className='sm:flex hidden'>
-            {isUserLoggedIn? 
+            {/* isUserLoggedIn? */}
+            {session?. user? 
 
             <div className='flex gap-3 md:gap-5'>
                 <Link href='/create-prompt'
@@ -51,8 +52,8 @@ const Nav = () => {
                     Sign Out
                 </button>
 
-                <Link href='/profile'>
-                    <Image src='/assets/images/logo.jpg' width={40} height={40} alt='profile picture' className='rounded-full'/>
+                <Link href='/profil'>
+                    <Image src={session?.user.image} width={40} height={40} alt='profile picture' className='rounded-full'/>
                 </Link>
 
             </div> 
@@ -78,16 +79,17 @@ const Nav = () => {
 
         {/* Mobile responsive / view */}
         <div className='sm:hidden flex relative'>
-            {isUserLoggedIn ? 
+            {/* isUserLoggedIn */}
+            {session?.user ? 
                 <div className='flex'>
-                    <Image src='/assets/images/logo.jpg' width={40} height={40} alt='profile picture' 
+                    <Image src={session?.user.image} width={40} height={40} alt='profile_picture' 
                     className='rounded-full'
                     onClick={()=> setToggleDropDown ((prev)=> !prev)}
                     />
                     {toggleDropDown && 
                         <div className='dropdown z-50 '>
                             <Link
-                             href='/profile'
+                             href='/profil'
                              className='dropdown_link'
                              onClick={() => setToggleDropDown (false)}>
                                 My Profile
