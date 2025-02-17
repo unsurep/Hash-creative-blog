@@ -26,13 +26,13 @@ const CreatePrompt = () => {
 
         try {
             // api call to the prompt endpoint
-            const response = await axios.post ('http://localhost:3000/api/prompt/new', {
+            const response = await axios.post ('/api/prompt/new', {
                 prompt: post.prompt,
                 userId: session?.user.id,
                 tag: post.tag
             });
 
-            if ( response.status == 201 ) {
+            if ( response.status === 201 ) {
                 router.push('/');
             }
    
