@@ -124,7 +124,7 @@
 
 /* Feed Component */
 .feed {
-  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+  @apply mt-8 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
 }
 
 /* Form Component */
@@ -325,3 +325,37 @@ body {
   padding: 0;
   border: 1px solid red;
 } */
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 20px !important;
+  background-color: white !important;
+  padding: 10px 15px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 50%;
+}
