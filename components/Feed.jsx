@@ -48,9 +48,10 @@ const Feed = () => {
   return (
     <section className="feed mx-[2rem] ">
       <div className="flex gap-12 overflow-x-scroll overflow-y-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
-       
-        
 
+      </div>
+      <div>
+        <button>About Us</button>
       </div>
 
       <PromptCardList
