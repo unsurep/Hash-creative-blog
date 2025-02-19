@@ -9,7 +9,7 @@ const Form = ({ type, post, setPost, submitting, handleSubmit}) => {
       </h1>
 
       <p className='desc text-left max-w-md'>
-        {type} and share stories with hashers all over the world on the last hashing event you experienced. Tell us how good/bad your hashing experience was.
+        {type} and share your hash-venture with hashers all over the world. Tell us how good/bad your hashing experience was, share thoughtful advice.
       </p>
 
       <form 
@@ -30,15 +30,17 @@ const Form = ({ type, post, setPost, submitting, handleSubmit}) => {
 
           <label>
             <span className='font-satoshi font-semibold text-base text-gray-700'>
-              Tag {` `} 
-              <span className='font-normal'> (#beer #run #onon #hashing #beerstop)</span>
+              {/* Tag {` `}  */}
+              Hash handle
+              {/* <span className='font-normal'> (#beer #run #onon #hashing #beerstop)</span> */}
             </span>
 
             <input
               value={post.tag}
               onChange={(e)=>setPost({ ...post, 
               tag: e.target.value })}
-              placeholder='#tag'
+              // placeholder='#tag'
+              placeholder='What is your Hash Handle?'
               required
               className='form_input'
             />

@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { useTypewriter} from 'react-simple-typewriter'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from "next/link";
+import { GiDoorHandle } from "react-icons/gi";
 
 
 const Home=()=>{
@@ -27,7 +29,7 @@ const Home=()=>{
 
     return(
         <div>
-        <section className="w-full flex-center flex-col relative">
+        <section className="w-full flex-center flex-col relative px-[2rem]">
             <h1 data-aos="zoom-in-up" data-aos-duration="2000" className="head_text text-center">{text}
                 {/* <br className="max-md:hidden"/> */}
                 <br className="" />
@@ -35,6 +37,9 @@ const Home=()=>{
             </h1>
 
             <p data-aos="zoom-in-up" data-aos-duration="2000" className="desc tect-center">Hash Online Publication Services also known as HOPS is a platform where hashers around the world discover and enjoy feedbacks from various hashing events in Nigeria.</p>
+
+
+            
 
             {/* Feed */}
             <Feed/>

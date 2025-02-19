@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react'
 
 
+
 const Nav = () => {
     // const isUserLoggedIn = true;
     const { data:session } = useSession();
@@ -37,6 +38,9 @@ const Nav = () => {
             <p className='logo_text'>HOPS</p>
         </Link>
 
+
+        
+
         {/* DESKTOP RESPONSIVE / VIEW */}
         <div className='sm:flex hidden'>
             {/* isUserLoggedIn? */}
@@ -47,6 +51,16 @@ const Nav = () => {
                     className='black_btn'>
                     Create Post
                 </Link>
+
+                <Link href={'/photoblast'} className='black_btn'>
+                    Photo-Blast 
+                </Link>
+
+                {/* <Link href={'/about'} className='black_btn'>
+                    About us
+                </Link> */}
+
+                
 
                 <button type='button' onClick={signOut} className='outline_btn'>
                     Sign Out

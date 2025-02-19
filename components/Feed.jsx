@@ -46,19 +46,9 @@ const Feed = () => {
 
 
   return (
-    <section className="feed">
-      <div className="flex gap-12 overflow-x-scroll overflow-y-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        <Image src='/assets/images/logo.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/agb.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/akwa.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/benin.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/buru.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/ebony.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/lagos.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/owerri.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/udu.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/uyo.png' alt='picture' width={100} height={100}/>
-        <Image src='/assets/images/warri.png' alt='picture' width={100} height={100}/>
+    <section className="feed mx-[2rem] ">
+      <div className="flex gap-12 overflow-x-scroll overflow-y-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
+       
         
 
       </div>
