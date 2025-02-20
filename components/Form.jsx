@@ -1,13 +1,21 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Form = ({ type, post, setPost, submitting, handleSubmit}) => {
   return (
     <section className='w-full max-w-full flex-start flex-col'>
-      <h1 className='head_text text-left'>
-        <span className='blue_gradient'>{type} Post</span> 
-      </h1>
 
+      <div className='flex gap-4 items-center justify-center'>
+        <h1 className='head_text text-left flex'>
+          <span className='blue_gradient'>{type} Post</span> 
+        </h1>
+
+        <div>
+          <Image src='/assets//images/beer.svg' width={100} height={100} alt='beericon' className='animate-bounce'/>
+        </div>
+      </div>
+    
       <p className='desc text-left max-w-md'>
         {type} and share your hash-venture with hashers all over the world. Tell us how good/bad your hashing experience was, share thoughtful advice.
       </p>

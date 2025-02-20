@@ -45,6 +45,8 @@ const Home=()=>{
             <Feed/>
 
         </section>
+
+        <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cm7972a9n01r8svk6l022jqqa" className="flex items-center justify-center"></script>
         
         </div>
     )

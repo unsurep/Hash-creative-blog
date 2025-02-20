@@ -1,7 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
+// cloud images for all hash logos
 const imageList = [
   "/assets/images/logo.png",
   "/assets/images/agb.png",
@@ -33,6 +35,8 @@ const imageList = [
   "/assets/images/img/igb.png",
 ];
 
+
+// pictures from past events
 const hopspic = [
   'https://res.cloudinary.com/dvkmv0k18/image/upload/v1739953021/IMG_7330_ken9yp.jpg',
   'https://res.cloudinary.com/dvkmv0k18/image/upload/v1739964773/IMG_7336_emrh9r.jpg',
@@ -137,6 +141,66 @@ const hopspic = [
   'https://res.cloudinary.com/dvkmv0k18/image/upload/v1739972401/IMG_9507_ia5o89.jpg',
   'https://res.cloudinary.com/dvkmv0k18/image/upload/v1739972441/IMG_9519_kntmhm.jpg',
 
+  // OTILO '25
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1739981725/swiper2_m6gyxs.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012798/DSC_4226_1_ncrydh.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012821/DSC_4259_qftqqv.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012844/DSC_4351_x94hto.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012868/DSC_4373_yzaqrw.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012890/DSC_4381_xpulqy.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012910/DSC_4388_r5fyzw.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012937/DSC_4404_zdutoh.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740012995/DSC_4422_bw0sju.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013019/DSC_4431_vjoljp.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013069/DSC_4449_eajc9l.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013094/DSC_4455_vusvy2.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013168/DSC_4467_jilr9k.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013193/DSC_4497_jghbjp.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013217/DSC_4503_tsoloc.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013243/DSC_4531_hzrvia.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013272/DSC_4620_dqysnl.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013294/DSC_4622_pa0byf.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013314/DSC_4623_u0fthp.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013331/DSC_4624_snw9ak.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013393/DSC_4639_r8fsac.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013454/DSC_4651_lcixhp.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013496/DSC_4678_koy2m8.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013534/DSC_4899_hkcfnq.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013577/DSC_4964_vutggs.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013604/DSC_4985_pliep4.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013647/DSC_5017_hrugdm.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013683/DSC_5065_fqbcm5.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013718/DSC_5088_vgunqm.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013745/DSC_5115_cyxhlp.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013788/DSC_5143_jtxeb2.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013818/DSC_5156_lkz13t.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013860/DSC_5163_crazz5.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013887/DSC_5165_wostbp.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013914/DSC_5180_wtignw.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013972/DSC_5190_lsn6rf.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740013997/DSC_5192_h4v6bh.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014040/DSC_5211_pev2aj.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014067/DSC_5214_qw0atn.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014090/DSC_5232_r9g1vd.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014115/DSC_5252_rlsrlk.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014226/DSC_5308_uugr3c.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014248/DSC_5313_slumtf.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014270/DSC_5393_buomqx.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014299/DSC_5395_nyy2yq.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014332/DSC_5414_tcngz5.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014357/DSC_5416_iyvba2.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014395/DSC_5418_pimga7.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014419/DSC_5419_ngvw8x.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014451/DSC_5422_g2fgrc.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014475/DSC_5428_szwu8n.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014515/DSC_5443_tlmb8q.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014538/DSC_5488_yhgyrv.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014688/DSC_5503_agly8n.jpg',
+  'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014620/DSC_5528_cytsf7.jpg',
+
+  
+
+
   
 
 
@@ -157,8 +221,6 @@ const hopspic = [
   
  
 ]
-
-
 
 
 const PhotoBlast = () => {
@@ -182,7 +244,23 @@ const PhotoBlast = () => {
         ))}
       </div>
 
-      <h1 className="mt-16 text-center font-bold text-xl md:text-4xl py-8">PHOTO-BLAST FROM PAST EVENTS</h1>
+      <Link href={'/about'} data-aos="zoom-in-up" data-aos-duration="2000" className="flex items-center justify-center pt-16">
+        <button type="submit" className="relative inline-block text-lg group mt-5 lg:mt-0 shake animate-bounce ">
+            <span className="relative z-10 block px-5 py-2.5 overflow-hidden font-medium leading-tight text-gray-600 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+            <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-orange-700 group-hover:-rotate-180 ease"></span>
+            <span className="relative md:text-lg text-sm">About Us</span>
+            </span>
+            <span
+            className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-yellow-600 rounded-lg group-hover:mb-0 group-hover:mr-0"
+            data-rounded="rounded-lg"
+            ></span>
+        </button>
+      </Link>
+
+      <h1 className="md:mt-16 text-center flex-col  font-bold head_text mt-3 md:text-4xl pb-8 orange_gradient md:flex items-center justify-center gap-3">PHOTO-BLAST FROM PAST EVENTS
+        <audio src="/assets/audio/grandpiano.mp3" type="audio/mpeg" className="cursor-pointer bg-orange-400 " controls></audio>
+      </h1>
 
       <div className="grid md:grid-cols-3 grid-cols-2 lg:grid-cols-5 gap-5 ">
         {hopspic.map((url, index)=>(
