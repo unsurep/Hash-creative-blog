@@ -40,16 +40,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
             </div>
         </div>
 
-        {/* <div className="copy_btn" onClick={handleCopy}>
-          <Image
-            src={copied === post.prompt 
-              ? '/assets/icons/tick.svg' 
-              : '/assets/icon/copy.svg'}
-            width={12}
-            height={12}
-            alt="image"
-          />
-        </div> */}
+        
       </div>
 
       <p className="my-4 font-satoshi text-sm text-gray-700">{post.prompt}</p>
