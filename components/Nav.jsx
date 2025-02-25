@@ -84,6 +84,23 @@ const Nav = () => {
                     >Photo-Blast</motion.div> 
                 </Link>
 
+                {/* <Link href={'/blog'} >
+                    <motion.div 
+                    className='black_btn'
+                    initial={{
+                        y:-500,
+                        opacity:0,
+                        scale:0.5,
+                    }}
+                    animate={{
+                        y:0,
+                        opacity:1,
+                        scale:1
+                    }}
+                    transition={{duration:1.6}}
+                    >Blog Post</motion.div> 
+                </Link> */}
+
                 <motion.div
                     initial={{
                         y:-500,
@@ -95,7 +112,7 @@ const Nav = () => {
                         opacity:1,
                         scale:1
                     }}
-                    transition={{duration:1.8}}
+                    transition={{duration:1.10}}
                     >
                     <button type='button' onClick={signOut} className='outline_btn'>
                         Sign Out
@@ -138,7 +155,20 @@ const Nav = () => {
                     onClick={()=> setToggleDropDown ((prev)=> !prev)}
                     />
                     {toggleDropDown && 
-                        <div className='dropdown z-50 '>
+                        <motion.div 
+                            
+                            initial={{
+                            y:-500,
+                            Opacity:0,
+                            scale:0.5
+                            }}
+                            animate={{
+                            y:0,
+                            opacity:1,
+                            scale:1
+                            }}
+                            transition={{duration:0.8}}
+                            className='dropdown z-50 '>
                             {/* <Link
                              href='/profile'
                              className='dropdown_link'
@@ -150,7 +180,7 @@ const Nav = () => {
                              href='/create-prompt'
                              className='dropdown_link'
                              onClick={() => setToggleDropDown (false)}>
-                                Create Prompt
+                                Create Post
                             </Link>
 
                             <Link
@@ -158,6 +188,13 @@ const Nav = () => {
                              className='dropdown_link'
                              onClick={() => setToggleDropDown (false)}>
                                 Photo Blast
+                            </Link>
+
+                            <Link
+                             href='/blog'
+                             className='dropdown_link'
+                             onClick={() => setToggleDropDown (false)}>
+                                Blog Post
                             </Link>
 
                             <button
@@ -169,7 +206,7 @@ const Nav = () => {
                             </button>
 
 
-                        </div>
+                        </motion.div>
                     }
 
 

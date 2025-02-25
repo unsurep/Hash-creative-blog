@@ -36,8 +36,7 @@ export default function RootLayout({ children }) {
             <Footer/>
           </main>
         </Provider>
-         {/*script for fastbot  */}
-        {/* <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="cm7972a9n01r8svk6l022jqqa"></script> */}
+        
       </body>
     </html>
   );
