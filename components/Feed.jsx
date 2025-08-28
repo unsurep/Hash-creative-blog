@@ -26,28 +26,64 @@ const Feed = () => {
 
 
 
-  const handleSearchChange=(e)=>{
+  const [allPosts, setAllPosts] = useState([]);
+  const [searchedResults, setSearchedResults] = useState([]);
+  const [searchTimeout, setSearchTimeout] = useState(null);
 
+  const filterPrompts = (searchtext) => {
+    const regex = new RegExp(searchtext, "i"); // 'i' flag for case-insensitive search
+    return allPosts.filter(
+      (item) =>
+        regex.test(item.creator.username) ||
+        regex.test(item.tag) ||
+        regex.test(item.prompt)
+    );
+  };
 
-  }
+  const handleSearchChange = (e) => {
+    clearTimeout(searchTimeout);
+    setSearchText(e.target.value);
 
+    // debounce method
+    setSearchTimeout(
+      setTimeout(() => {
+        const searchResult = filterPrompts(e.target.value);
+        setSearchedResults(searchResult);
+      }, 500)
+    );
+  };
 
+  const handleTagClick = (tagName) => {
+    setSearchText(tagName);
+    const searchResult = filterPrompts(tagName);
+    setSearchedResults(searchResult);
+  };
 
-  useEffect(()=>{
-    const fetchPosts = async ()=>{
-      const response = await fetch ('/api/prompt');
-      const data= await response.json();
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch("/api/prompt");
+      const data = await response.json();
 
-      setPosts(data);
-    }
+      setAllPosts(data);
+      setSearchedResults(data);
+    };
+
     fetchPosts();
-
   }, []);
-
-
 
   return (
     <section className="feed mx-[2rem] ">
+      <form className='relative w-full flex-center'>
+        <input
+          type='text'
+          placeholder='Search for a username or tag'
+          value={searchText}
+          onChange={handleSearchChange}
+          required
+          className='search_input peer'
+        />
+      </form>
+
       <div className="flex gap-12 overflow-x-scroll overflow-y-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 ">
 
       </div>
@@ -84,11 +120,15 @@ const Feed = () => {
       </Link>
       </div>
 
-      <PromptCardList
-        data={posts}
-        handleTagClick={() => {}}
-  
-      />
+      {/* All Prompts */}
+      {searchText ? (
+        <PromptCardList
+          data={searchedResults}
+          handleTagClick={handleTagClick}
+        />
+      ) : (
+        <PromptCardList data={allPosts} handleTagClick={handleTagClick} />
+      )}
 
       <div className='py-5 w-full'>
         <Image src='/assets/images/dc.png' width={1000} height={1000} alt='image' className='hvr-skew w-full'/>

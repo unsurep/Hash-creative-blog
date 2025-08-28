@@ -198,28 +198,7 @@ const hopspic = [
   'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014688/DSC_5503_agly8n.jpg',
   'https://res.cloudinary.com/dvkmv0k18/image/upload/v1740014620/DSC_5528_cytsf7.jpg',
 
-  
 
-
-  
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
- 
-  
- 
 ]
 
 
