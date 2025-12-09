@@ -18,26 +18,26 @@ const nextConfig = {
                 hostname: 'res.cloudinary.com',
                 port: '',
                 pathname: '/**',
-              },
+            },
 
-              {
+            {
                 protocol: 'https',
                 hostname: 'photos.google.com',
                 port: '',
                 pathname: '/**',
-              },
+            },
 
-           
+
         ],
     },
 
-    webpack(config) {
-        config.experiments = {
-            ...config.experiments,
-            topLevelAwait: true,
-        };
-        return config;
-    }
+    // webpack(config) {
+    //     config.experiments = {
+    //         ...config.experiments,
+    //         topLevelAwait: true,
+    //     };
+    //     return config;
+    // }
 };
 
 module.exports = nextConfig;
